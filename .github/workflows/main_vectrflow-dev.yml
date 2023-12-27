@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - vectrflow-dev
+name: Build and deploy Node.js app to Azure Web App - VectrFlow-Dev
 
 on:
   push:
@@ -56,7 +56,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'vectrflow-dev'
+          app-name: 'VectrFlow-Dev'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_50BA6DDA164F410694455BC7113A01C3 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E81B0CC806534596BAC59E32237BE636 }}
           package: .
