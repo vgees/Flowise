@@ -19,6 +19,7 @@ import {
     OutlinedInput,
     Paper,
     Stack,
+    TextField,
     Typography
 } from '@mui/material'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
@@ -142,26 +143,40 @@ const AddNodes = ({ nodesData, node }) => {
             sx={{
                 position: 'relative',
                 left: 0,
-                top: '30px',
+                top: 0,
                 bottom: 0,
                 zIndex: 1000,
-                width: '250px', // Adjust the width as needed
-                borderRight: `1px solid ${theme.palette.divider}`
+                width: '300px', // Adjust the width as needed
+                height: '100vh',
+                borderRight: `2px solid ${theme.palette.divider}`,
+                borderRadius: '0',
+                overflow: 'hidden'
             }}
         >
             <Box sx={{ p: 2 }}>
                 <Stack>
-                    <Typography variant='h4'>Add Nodes</Typography>
+                    <Typography variant='h4'></Typography>
                 </Stack>
-                <OutlinedInput
-                    sx={{ width: '100%', pr: 2, pl: 2, my: 2 }}
+                <TextField
+                    label='Search'
+                    variant='standard'
+                    sx={{
+                        width: '100%',
+                        '& .MuiOutlinedInput-root': {
+                            '& fieldset': {
+                                borderColor: '#E22A90'
+                            },
+                            '&:hover fieldset': { borderColor: '#E22A90' },
+                            '&.Mui-focused fieldset': { borderColor: '#E22A90' }
+                        }
+                    }}
                     id='input-search-node'
                     value={searchValue}
                     onChange={(e) => filterSearch(e.target.value)}
-                    placeholder='Search nodes'
+                    placeholder='Search'
                     startAdornment={
                         <InputAdornment position='start'>
-                            <IconSearch stroke={1.5} size='1rem' color={theme.palette.grey[500]} />
+                            <IconSearch stroke={1.5} size='1rem' color='#E22A90' />
                         </InputAdornment>
                     }
                     endAdornment={
@@ -169,16 +184,16 @@ const AddNodes = ({ nodesData, node }) => {
                             position='end'
                             sx={{
                                 cursor: 'pointer',
-                                color: theme.palette.grey[500],
+                                color: '#E22A90',
                                 '&:hover': {
-                                    color: theme.palette.grey[900]
+                                    color: '#3C5BA4'
                                 }
                             }}
                             title='Clear Search'
                         >
                             <IconX
-                                stroke={1.5}
-                                size='1rem'
+                                stroke={2}
+                                size='2rem'
                                 onClick={() => filterSearch('')}
                                 style={{
                                     cursor: 'pointer'
@@ -197,7 +212,7 @@ const AddNodes = ({ nodesData, node }) => {
                 containerRef={(el) => {
                     ps.current = el
                 }}
-                style={{ height: '100%', maxHeight: 'calc(100vh - 320px)', overflowX: 'hidden' }}
+                style={{ height: '100vh', maxHeight: 'calc(100vh - 250px)', overflowX: 'hidden' }}
             >
                 <Box sx={{ p: 2 }}>
                     <List
@@ -205,7 +220,7 @@ const AddNodes = ({ nodesData, node }) => {
                             width: '100%',
                             maxWidth: 370,
                             py: 0,
-                            borderRadius: '10px',
+                            //borderRadius: '10px',
                             '& .MuiListItemSecondaryAction-root': {
                                 top: 22
                             },
@@ -290,7 +305,9 @@ const AddNodes = ({ nodesData, node }) => {
                                                     <ListItem
                                                         alignItems='flex-start'
                                                         sx={{
-                                                            cursor: 'move'
+                                                            cursor: 'move',
+                                                            display: 'flex', // Added display: flex
+                                                            alignItems: 'center' // Added alignItems: center
                                                         }}
                                                     >
                                                         <ListItemAvatar>
@@ -306,7 +323,7 @@ const AddNodes = ({ nodesData, node }) => {
                                                                     style={{
                                                                         width: '100%',
                                                                         height: '100%',
-                                                                        padding: 10,
+                                                                        padding: 5,
                                                                         objectFit: 'contain'
                                                                     }}
                                                                     alt={node.name}

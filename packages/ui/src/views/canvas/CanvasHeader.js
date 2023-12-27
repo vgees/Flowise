@@ -188,11 +188,11 @@ const CanvasHeader = ({ chatflow, handleSaveFlow, handleDeleteFlow, handleLoadFl
                             ...theme.typography.commonAvatar,
                             ...theme.typography.mediumAvatar,
                             transition: 'all .2s ease-in-out',
-                            background: theme.palette.secondary.light,
-                            color: theme.palette.secondary.dark,
+                            background: 'linear-gradient(to right, #E22A90, #E22A90)',
+                            color: 'white',
                             '&:hover': {
-                                background: theme.palette.secondary.dark,
-                                color: theme.palette.secondary.light
+                                background: 'linear-gradient(to left, #E22A90, #3C5BA4)',
+                                color: 'white'
                             }
                         }}
                         color='inherit'
@@ -225,11 +225,11 @@ const CanvasHeader = ({ chatflow, handleSaveFlow, handleDeleteFlow, handleLoadFl
                                         ...theme.typography.mediumAvatar,
                                         transition: 'all .2s ease-in-out',
                                         ml: 1,
-                                        background: theme.palette.secondary.light,
-                                        color: theme.palette.secondary.dark,
+                                        background: 'linear-gradient(to right, #E22A90, #E22A90)',
+                                        color: 'white',
                                         '&:hover': {
-                                            background: theme.palette.secondary.dark,
-                                            color: theme.palette.secondary.light
+                                            background: 'linear-gradient(to left, #E22A90, #3C5BA4)',
+                                            color: 'white'
                                         }
                                     }}
                                     color='inherit'
@@ -306,11 +306,11 @@ const CanvasHeader = ({ chatflow, handleSaveFlow, handleDeleteFlow, handleLoadFl
                                 ...theme.typography.commonAvatar,
                                 ...theme.typography.mediumAvatar,
                                 transition: 'all .2s ease-in-out',
-                                background: theme.palette.canvasHeader.deployLight,
-                                color: theme.palette.canvasHeader.deployDark,
+                                background: 'linear-gradient(to right, #E22A90, #E22A90)',
+                                color: 'white',
                                 '&:hover': {
-                                    background: theme.palette.canvasHeader.deployDark,
-                                    color: theme.palette.canvasHeader.deployLight
+                                    background: 'linear-gradient(to left, #E22A90, #3C5BA4)',
+                                    color: 'white'
                                 }
                             }}
                             color='inherit'
@@ -327,11 +327,11 @@ const CanvasHeader = ({ chatflow, handleSaveFlow, handleDeleteFlow, handleLoadFl
                             ...theme.typography.commonAvatar,
                             ...theme.typography.mediumAvatar,
                             transition: 'all .2s ease-in-out',
-                            background: theme.palette.canvasHeader.saveLight,
-                            color: theme.palette.canvasHeader.saveDark,
+                            background: 'linear-gradient(to right, #E22A90, #E22A90)',
+                            color: 'white',
                             '&:hover': {
-                                background: theme.palette.canvasHeader.saveDark,
-                                color: theme.palette.canvasHeader.saveLight
+                                background: 'linear-gradient(to left, #E22A90, #3C5BA4)',
+                                color: 'white'
                             }
                         }}
                         color='inherit'
@@ -347,11 +347,11 @@ const CanvasHeader = ({ chatflow, handleSaveFlow, handleDeleteFlow, handleLoadFl
                             ...theme.typography.commonAvatar,
                             ...theme.typography.mediumAvatar,
                             transition: 'all .2s ease-in-out',
-                            background: theme.palette.canvasHeader.settingsLight,
-                            color: theme.palette.canvasHeader.settingsDark,
+                            background: 'linear-gradient(to right, #E22A90, #E22A90)',
+                            color: 'white',
                             '&:hover': {
-                                background: theme.palette.canvasHeader.settingsDark,
-                                color: theme.palette.canvasHeader.settingsLight
+                                background: 'linear-gradient(to left, #E22A90, #3C5BA4)',
+                                color: 'white'
                             }
                         }}
                         onClick={() => setSettingsOpen(!isSettingsOpen)}

@@ -29,6 +29,7 @@ import * as React from 'react'
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup'
 import { FlowListTable } from '../../ui-component/table/FlowListTable'
 import { StyledButton } from '../../ui-component/button/StyledButton'
+import LaunchTwoToneIcon from '@mui/icons-material/LaunchTwoTone'
 
 // ==============================|| CHATFLOWS ||============================== //
 
@@ -137,7 +138,7 @@ const Chatflows = () => {
                             width: '100%'
                         }}
                     >
-                        <h1>Chatflows</h1>
+                        <h1>GenAI Apps Workspace</h1>
                         <TextField
                             size='small'
                             sx={{ display: { xs: 'none', sm: 'block' }, ml: 3 }}
@@ -157,7 +158,7 @@ const Chatflows = () => {
                             <ButtonGroup disableElevation variant='contained' aria-label='outlined primary button group'>
                                 <ToggleButtonGroup sx={{ maxHeight: 40 }} value={view} color='primary' exclusive onChange={handleChange}>
                                     <ToggleButton
-                                        sx={{ color: theme?.customization?.isDarkMode ? 'white' : 'inherit' }}
+                                        sx={{ color: theme?.customization?.isDarkMode ? '#E22A90' : '#E22A90' }}
                                         variant='contained'
                                         value='card'
                                         title='Card View'
@@ -165,7 +166,7 @@ const Chatflows = () => {
                                         <IconLayoutGrid />
                                     </ToggleButton>
                                     <ToggleButton
-                                        sx={{ color: theme?.customization?.isDarkMode ? 'white' : 'inherit' }}
+                                        sx={{ color: theme?.customization?.isDarkMode ? '#E22A90' : '#E22A90' }}
                                         variant='contained'
                                         value='list'
                                         title='List View'
@@ -176,8 +177,8 @@ const Chatflows = () => {
                             </ButtonGroup>
                             <Box sx={{ width: 5 }} />
                             <ButtonGroup disableElevation aria-label='outlined primary button group'>
-                                <StyledButton variant='contained' onClick={addNew} startIcon={<IconPlus />}>
-                                    Add New
+                                <StyledButton variant='outlined' onClick={addNew} endIcon={<LaunchTwoToneIcon />}>
+                                    Create GenAI App
                                 </StyledButton>
                             </ButtonGroup>
                         </ButtonGroup>
