@@ -138,7 +138,17 @@ const Chatflows = () => {
                             width: '100%'
                         }}
                     >
-                        <h1>GenAI Apps Workspace</h1>
+                        <h1
+                            style={{
+                                background: 'linear-gradient(to right, #3C5BA4 0%, #E22A90 100%)',
+                                WebkitBackgroundClip: 'text',
+                                color: 'transparent',
+                                fontSize: '20px'
+                            }}
+                        >
+                            AI Apps Workspace
+                        </h1>
+
                         <TextField
                             size='small'
                             sx={{ display: { xs: 'none', sm: 'block' }, ml: 3 }}

@@ -9,15 +9,17 @@ import MainCard from 'ui-component/cards/MainCard'
 import SkeletonChatflowCard from 'ui-component/cards/Skeleton/ChatflowCard'
 
 const CardWrapper = styled(MainCard)(({ theme }) => ({
-    background: theme.palette.card.main,
-    color: theme.darkTextPrimary,
+    background: 'transparent',
+    color: '#E22A90',
     overflow: 'auto',
     position: 'relative',
-    boxShadow: '0 2px 14px 0 rgb(32 40 45 / 8%)',
+    boxShadow: '0 0 10px rgba(60, 91, 164, 0.8), 0 0 20px rgba(226, 42, 144, 0.2)',
     cursor: 'pointer',
+    backgroundImage: 'linear-gradient(to right, "#3C5BA4", "#E22A90")',
+    transition: 'box-shadow 0.3s ease',
     '&:hover': {
-        background: theme.palette.card.hover,
-        boxShadow: '0 2px 14px 0 rgb(32 40 45 / 20%)'
+        backgroundImage: 'linear-gradient(to left, "#3C5BA4", "#E22A90")',
+        boxShadow: '0 0 20px rgba(60, 91, 164, 0.8), 0 0 30px rgba(226, 42, 144, 0.8)'
     },
     maxHeight: '300px',
     maxWidth: '300px',
@@ -69,7 +71,7 @@ const ItemCard = ({ isLoading, data, images, onClick }) => {
                                     ></div>
                                 )}
                                 <Typography
-                                    sx={{ fontSize: '1.5rem', fontWeight: 500, overflowWrap: 'break-word', whiteSpace: 'pre-line' }}
+                                    sx={{ fontSize: '2.6 rem', fontWeight: 510, overflowWrap: 'break-word', whiteSpace: 'pre-line' }}
                                 >
                                     {data.templateName || data.name}
                                 </Typography>
