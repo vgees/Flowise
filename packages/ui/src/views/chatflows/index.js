@@ -143,7 +143,7 @@ const Chatflows = () => {
                             size='small'
                             sx={{ display: { xs: 'none', sm: 'block' }, ml: 3 }}
                             variant='outlined'
-                            placeholder='Search name or category'
+                            placeholder='Search by name or category'
                             onChange={onSearchChange}
                             InputProps={{
                                 startAdornment: (
