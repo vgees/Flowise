@@ -1,6 +1,5 @@
 {
-    "description": "Flowise Docs Github QnA using conversational retrieval QA chain",
-    "badge": "POPULAR",
+    "description": "VectrFlow Docs Github QnA using conversational retrieval QA chain",
     "nodes": [
         {
             "width": 300,

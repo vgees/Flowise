@@ -16,10 +16,11 @@ import FlowListMenu from '../button/FlowListMenu'
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
         backgroundColor: theme.palette.common.black,
-        color: theme.palette.common.white
+        color: '#E22A90'
     },
     [`&.${tableCellClasses.body}`]: {
-        fontSize: 14
+        fontSize: 14,
+        color: '#E22A90'
     }
 }))
 
@@ -44,20 +45,17 @@ export const FlowListTable = ({ data, images, filterFunction, updateFlowsApi }) 
             <TableContainer style={{ marginTop: '30', border: 1 }} component={Paper}>
                 <Table sx={{ minWidth: 650 }} size='small' aria-label='a dense table'>
                     <TableHead>
-                        <TableRow sx={{ marginTop: '10', backgroundColor: 'primary' }}>
-                            <StyledTableCell component='th' scope='row' style={{ width: '20%' }} key='0'>
+                        <TableRow sx={{ marginTop: '10', backgroundColor: '#E22A90' }}>
+                            <StyledTableCell component='th' scope='row' style={{ width: '25%' }} key='0'>
                                 Name
                             </StyledTableCell>
-                            <StyledTableCell style={{ width: '25%' }} key='1'>
+                            <StyledTableCell style={{ width: '20%' }} key='1'>
                                 Category
                             </StyledTableCell>
-                            <StyledTableCell style={{ width: '30%' }} key='2'>
+                            <StyledTableCell style={{ width: '40%' }} key='2'>
                                 Nodes
                             </StyledTableCell>
                             <StyledTableCell style={{ width: '15%' }} key='3'>
-                                Last Modified Date
-                            </StyledTableCell>
-                            <StyledTableCell style={{ width: '10%' }} key='4'>
                                 Actions
                             </StyledTableCell>
                         </TableRow>
@@ -67,7 +65,13 @@ export const FlowListTable = ({ data, images, filterFunction, updateFlowsApi }) 
                             <StyledTableRow key={index}>
                                 <TableCell key='0'>
                                     <Typography
-                                        sx={{ fontSize: '1.2rem', fontWeight: 500, overflowWrap: 'break-word', whiteSpace: 'pre-line' }}
+                                        sx={{
+                                            fontSize: '1.5rem',
+                                            fontColor: '#E22A90',
+                                            fontWeight: 500,
+                                            overflowWrap: 'break-word',
+                                            whiteSpace: 'pre-line'
+                                        }}
                                     >
                                         <Button onClick={() => goToCanvas(row)} sx={{ textAlign: 'left' }}>
                                             {row.templateName || row.name}
@@ -131,8 +135,7 @@ export const FlowListTable = ({ data, images, filterFunction, updateFlowsApi }) 
                                         </div>
                                     )}
                                 </TableCell>
-                                <TableCell key='3'>{moment(row.updatedDate).format('MMMM Do, YYYY')}</TableCell>
-                                <TableCell key='4'>
+                                <TableCell key='3'>
                                     <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1} justifyContent='center' alignItems='center'>
                                         <FlowListMenu chatflow={row} updateFlowsApi={updateFlowsApi} />
                                     </Stack>

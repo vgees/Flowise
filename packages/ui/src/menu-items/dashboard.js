@@ -1,4 +1,5 @@
 // assets
+import React from 'react'
 import { IconHierarchy, IconBuildingStore, IconKey, IconTool, IconLock, IconRobot } from '@tabler/icons'
 
 // constant
@@ -13,53 +14,124 @@ const dashboard = {
     children: [
         {
             id: 'chatflows',
-            title: 'Chatflows',
+            title: (
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+                    <div
+                        style={{
+                            borderRadius: '50%',
+                            padding: '10px',
+                            marginBottom: '10px'
+                        }}
+                    >
+                        <IconHierarchy size='36' color='#E22A90' />
+                    </div>
+                    <span style={{ fontSize: '18px' }}>AI Workspace</span>
+                </div>
+            ),
             type: 'item',
             url: '/chatflows',
-            icon: icons.IconHierarchy,
             breadcrumbs: true
         },
         {
             id: 'marketplaces',
-            title: 'Marketplaces',
+            title: (
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+                    <div
+                        style={{
+                            borderRadius: '50%',
+                            padding: '10px',
+                            marginBottom: '10px'
+                        }}
+                    >
+                        <IconBuildingStore size='36' color='#E22A90' />
+                    </div>
+                    <span style={{ fontSize: '18px' }}>Templates</span>
+                </div>
+            ),
             type: 'item',
             url: '/marketplaces',
-            icon: icons.IconBuildingStore,
             breadcrumbs: true
         },
         {
             id: 'tools',
-            title: 'Tools',
+            title: (
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+                    <div
+                        style={{
+                            borderRadius: '50%',
+                            padding: '10px',
+                            marginBottom: '10px'
+                        }}
+                    >
+                        <IconTool size='36' color='#E22A90' />
+                    </div>
+                    <span style={{ fontSize: '18px' }}>Tools</span>
+                </div>
+            ),
             type: 'item',
             url: '/tools',
-            icon: icons.IconTool,
             breadcrumbs: true
         },
         {
             id: 'assistants',
-            title: 'Assistants',
+            title: (
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+                    <div
+                        style={{
+                            borderRadius: '50%',
+                            padding: '10px',
+                            marginBottom: '10px'
+                        }}
+                    >
+                        <IconRobot size='36' color='#E22A90' />
+                    </div>
+                    <span style={{ fontSize: '18px' }}>Assistants</span>
+                </div>
+            ),
             type: 'item',
             url: '/assistants',
-            icon: icons.IconRobot,
             breadcrumbs: true
         },
         {
             id: 'credentials',
-            title: 'Credentials',
+            title: (
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+                    <div
+                        style={{
+                            borderRadius: '50%',
+                            padding: '10px',
+                            marginBottom: '10px'
+                        }}
+                    >
+                        <IconLock size='36' color='#E22A90' />
+                    </div>
+                    <span style={{ fontSize: '18px' }}>Credentials</span>
+                </div>
+            ),
             type: 'item',
             url: '/credentials',
-            icon: icons.IconLock,
             breadcrumbs: true
         },
         {
             id: 'apikey',
-            title: 'API Keys',
+            title: (
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+                    <div
+                        style={{
+                            borderRadius: '50%',
+                            padding: '10px',
+                            marginBottom: '10px'
+                        }}
+                    >
+                        <IconKey size='36' color='#E22A90' />
+                    </div>
+                    <span style={{ fontSize: '18px' }}>API Keys</span>
+                </div>
+            ),
             type: 'item',
             url: '/apikey',
-            icon: icons.IconKey,
             breadcrumbs: true
         }
     ]
 }
-
 export default dashboard

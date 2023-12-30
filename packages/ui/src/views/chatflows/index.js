@@ -143,22 +143,30 @@ const Chatflows = () => {
                                 background: 'linear-gradient(to right, #3C5BA4 0%, #E22A90 100%)',
                                 WebkitBackgroundClip: 'text',
                                 color: 'transparent',
-                                fontSize: '20px'
+                                fontSize: '24px'
                             }}
                         >
                             AI Apps Workspace
                         </h1>
 
                         <TextField
-                            size='small'
-                            sx={{ display: { xs: 'none', sm: 'block' }, ml: 3 }}
-                            variant='outlined'
+                            size='large'
+                            sx={{
+                                display: { xs: 'none', sm: 'block' },
+                                ml: 3,
+                                width: '300px',
+                                '& input': { color: '#3C5BA4' },
+                                '& label.Mui-focused': { color: '#E22A90' },
+                                '& .MuiInput-underline:after': { borderBottomColor: '#E22A90' },
+                                '& .MuiInput-underline:before': { borderBottomColor: '#E22A90' }
+                            }}
+                            variant='standard'
                             placeholder='Search by name or category'
                             onChange={onSearchChange}
                             InputProps={{
                                 startAdornment: (
                                     <InputAdornment position='start'>
-                                        <IconSearch />
+                                        <IconSearch sx={{ color: '#E22A90' }} />
                                     </InputAdornment>
                                 )
                             }}
