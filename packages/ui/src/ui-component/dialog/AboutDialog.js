@@ -23,8 +23,10 @@ const AboutDialog = ({ show, onCancel }) => {
                     password
                 }
             }
-            const latestReleaseReq = axios.get('https://api.github.com/repos/FlowiseAI/Flowise/releases/latest')
-            const currentVersionReq = axios.get(`${baseURL}/api/v1/version`, { ...config })
+            //const latestReleaseReq = axios.get('https://api.github.com/repos/FlowiseAI/Flowise/releases/latest')
+            //const currentVersionReq = axios.get(`${baseURL}/api/v1/version`, { ...config })
+            const latestReleaseReq = axios.get('0.1.1')
+            const currentVersionReq = axios.get('0.1.1')
 
             Promise.all([latestReleaseReq, currentVersionReq])
                 .then(([latestReleaseData, currentVersionData]) => {
@@ -52,7 +54,7 @@ const AboutDialog = ({ show, onCancel }) => {
             aria-describedby='alert-dialog-description'
         >
             <DialogTitle sx={{ fontSize: '1rem' }} id='alert-dialog-title'>
-                Flowise Version
+                VectrFlow Version
             </DialogTitle>
             <DialogContent>
                 {data && (

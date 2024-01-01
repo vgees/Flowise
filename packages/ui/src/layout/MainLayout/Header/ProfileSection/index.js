@@ -83,7 +83,7 @@ const ProfileSection = ({ username, handleLogout }) => {
                     onClick={handleToggle}
                     color='inherit'
                 >
-                    <IconSettings stroke={1.5} size='1.3rem' />
+                    <IconSettings stroke={1.5} size='1.35rem' />
                 </Avatar>
             </ButtonBase>
             <Popper
@@ -145,7 +145,7 @@ const ProfileSection = ({ username, handleLogout }) => {
                                                     <ListItemIcon>
                                                         <IconInfoCircle stroke={1.5} size='1.3rem' />
                                                     </ListItemIcon>
-                                                    <ListItemText primary={<Typography variant='body2'>About Flowise</Typography>} />
+                                                    <ListItemText primary={<Typography variant='body2'>About VectrFlow</Typography>} />
                                                 </ListItemButton>
                                                 {localStorage.getItem('username') && localStorage.getItem('password') && (
                                                     <ListItemButton
